@@ -23,7 +23,7 @@ function LoadPosts(){
     <div>
       <h1>Posts: {posts.length}</h1>
       {
-        posts.map(post => <Post title={post.title}></Post> )
+        posts.map(post => <Post title={post.title} body={post.body}></Post> )
       }
     </div>
   )
@@ -31,7 +31,7 @@ function LoadPosts(){
 
 function Post(props){
   return (
-    <div>
+    <div style={{backgroundColor: 'lightsalmon', margin:'20px', border: '4px solid salmon', borderRadius:'20px'}}>
       <h2>Title: {props.title}</h2>
       <p>Body: {props.body}</p>
     </div>
